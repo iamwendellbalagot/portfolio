@@ -1,0 +1,79 @@
+.pf {
+  display: flex;
+  flex-direction: column;
+  color: #1e2022;
+  height: 100%;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.pf > h1 {
+  margin-left: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-right: 3%;
+}
+
+.pf > hr {
+  border: 0;
+  height: 5px;
+  width: 700px;
+  object-fit: contain;
+  background-image: url(../assets/hr_bg.png);
+}
+
+.pf__rows {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px 50px;
+}
+
+.pf__rowCard {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  border: rgba(30, 32, 34, 0.5) solid 1px;
+  border-radius: 5px;
+}
+
+.pf__rowCard > img {
+  height: 400px;
+  width: 100%;
+  background-color: #1e2022;
+}
+
+.pf__rowCard > h2 {
+  margin: 0;
+  padding-left: 5px;
+}
+
+.pf__rowCard > p {
+  padding-left: 5px;
+}
+
+.pf__rowCard > div {
+  padding-left: 5px;
+  margin-bottom: 20px;
+}
+
+.pf__rowCard > div > button {
+  height: 40px;
+  background-color: #ccc;
+  font-weight: 700;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: all 200ms;
+}
+
+.pf__rowCard > div > button:hover {
+  transform: scale(1.05);
+  margin-left: 5px;
+}

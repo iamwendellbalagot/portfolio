@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel='stylesheet' href="./components/projects.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <title>Wendell Balagot</title>
 </head>
 <body>
@@ -14,7 +17,7 @@
                 <h2>WENDELL BALAGOT</h2>
                 <ul>
                     <li><a>Home</a></li>
-                    <li><a>Portfolio</a></li>
+                    <li><a>Projects</a></li>
                     <li><a>Contact</a></li>
                 </ul>
             </div>
@@ -22,7 +25,7 @@
                 <h1>WEB DEVELOPMENT</h1>
                 <h1>PORTFOLIO</h1>
                 <div class="home__bodyButtons">
-                    <button>GitHub</button>
+                    <button id='btn'>GitHub</button>
                     <button>LinkedIn</button>
                     <button style="font-size: 30px;">⬇</button>
                     <button>Data Science</button>
@@ -31,6 +34,15 @@
             </div>
         </div>
         <!-- HOME DIV END -->
+
+        <!-- PORTFOLIO DIV -->
+        <div class="app__portfolio" id='app__portfolio'>
+        </div>
     </div>
 </body>
+<script>
+    $(document).ready(() => {
+        $('#app__portfolio').load('./components/projects.html');
+    });
+</script>
 </html>
