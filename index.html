@@ -12,7 +12,7 @@
 <body>
     <div class="app" >
         <!-- HOME DIV -->
-        <div class="app__home">
+        <div class="app__home" id='title__home' >
             <div class="home__header">
                 <h2>WENDELL BALAGOT</h2>
                 <ul>
@@ -54,6 +54,7 @@
     </div>
 </body> 
 <footer>
+    <img src="./assets//home.svg" alt="home" id="nav__home" >
     <p>2020 JOHN WENDELL BALAGOT</p>
 </footer>
 <script>
@@ -67,6 +68,11 @@
     });
     $('#nav__contact').click(() => {
         $('#title__contact')[0].scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+    $('#nav__home').click(() => {
+        $('#title__home')[0].scrollIntoView({
             behavior: 'smooth'
         });
     });
