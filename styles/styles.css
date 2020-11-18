@@ -79,3 +79,34 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.app__contact {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #1e2022;
+  height: 100%;
+}
+
+.app__contact > img {
+  object-fit: contain;
+  height: 300px;
+  border-radius: 100%;
+  margin: 50px 0px 50px 0px;
+}
+
+.app__contact > div > ul > li {
+  padding: 10px;
+  font-size: 17px;
+  transition: all 200ms;
+  cursor: pointer;
+}
+
+.app__contact > div > ul > li > a {
+  text-decoration: none;
+  color: steelblue;
+}
+
+.app__contact > div > ul > li:hover {
+  transform: scale(1.05);
+}

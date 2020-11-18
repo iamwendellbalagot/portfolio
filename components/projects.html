@@ -1,32 +1,63 @@
 <div class="pf">
-    <h1>PROJECT PORTFOLIO</h1>
-    <hr>
-    <div class="pf__rows">
-        <div class="pf__rowCard" style="margin-right: 30px;" >
-            <img src='' alt='image' />
-            <h2>Project Title</h2>
-            <p>Eu turpis egestas pretium aenean. Sed blandit libero volutpat sed cras ornare arcu. Eget dolor morbi non arcu risus. Integer vitae justo eget magna fermentum. Sed turpis tincidunt id aliquet. Dignissim convallis aenean et tortor at.</p>
-            <div>
-                <button>
-                    Go to project
-                </button>
-                <button>
-                    View project repository
-                </button>
-            </div>
-        </div>
-        <div class="pf__rowCard">
-            <img src='' alt='image' />
-            <h2>Project Title</h2>
-            <p>Eu turpis egestas pretium aenean. Sed blandit libero volutpat sed cras ornare arcu. Eget dolor morbi non arcu risus. Integer vitae justo eget magna fermentum. Sed turpis tincidunt id aliquet. Dignissim convallis aenean et tortor at.</p>
-            <div>
-                <button>
-                    Go to project
-                </button>
-                <button>
-                    View project repository
-                </button>
-            </div>
-        </div>
+    <div class="pf__header">
+        <h1>PROJECT PORTFOLIO</h1>
+        <hr>
+    </div>
+    <div id='pf__contents' >
+        
     </div>
 </div>
+
+<script>
+
+    const projectTitles =[
+        {p1: 'IP TRACKER', p2: 'MEETME'},
+        {p1: 'DISROPE', p2: 'INSTAPOUND'}
+        
+    ];
+
+    const projectOverview = [
+        {
+            p1: 'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+            p2: 'Felis donec et odio pellentesque. Pulvinar mattis nunc sed blandit libero volutpat sed. Eget egestas purus viverra accumsan in. Eu volutpat odio facilisis mauris sit. Amet consectetur adipiscing elit duis tristique sollicitudin.'
+        },
+        {
+            p1: 'Semper risus in hendrerit gravida rutrum quisque non. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Suspendisse potenti nullam ac tortor vitae purus faucibus.',
+            p2: 'Accumsan lacus vel facilisis volutpat est velit egestas dui id. Tellus molestie nunc non blandit massa enim nec. Orci porta non pulvinar neque laoreet. Mattis vulputate enim nulla aliquet. '
+        }
+    ];
+
+    for (let i=0; i<=projectTitles.length; i++){
+        $("#pf__contents").append(
+            `<div class="pf__rows" id ="pf__rows">
+                <div class="pf__rowCard" style="margin-right: 30px;" >
+                    <img src='' alt='image' />
+                    <h2>${projectTitles[i].p1}</h2>
+                    <p>${projectOverview[i].p1}</p>
+                    <div>
+                        <button>
+                            Go to project
+                        </button>
+                        <button>
+                            View project repository
+                        </button>
+                    </div>
+                </div>
+                <div class="pf__rowCard">
+                    <img src='' alt='image' />
+                    <h2>${projectTitles[i].p2}</h2>
+                    <p>${projectOverview[i].p2}</p>
+                    <div>
+                        <button>
+                            Go to project
+                        </button>
+                        <button>
+                            View project repository
+                        </button>
+                    </div>
+                </div>
+            </div>`
+        );
+    };
+    
+</script>

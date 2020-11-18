@@ -8,14 +8,14 @@
   align-items: center;
 }
 
-.pf > h1 {
+.pf__header > h1 {
   margin-left: 50px;
   margin-bottom: 10px;
   text-align: center;
   margin-right: 3%;
 }
 
-.pf > hr {
+.pf__header > hr {
   border: 0;
   height: 5px;
   width: 700px;
@@ -32,6 +32,7 @@
 
 .pf__rowCard {
   display: flex;
+  flex: 0.5;
   flex-direction: column;
   align-items: left;
   border: rgba(30, 32, 34, 0.5) solid 1px;
