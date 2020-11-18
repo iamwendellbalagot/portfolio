@@ -110,3 +110,12 @@ body {
 .app__contact > div > ul > li:hover {
   transform: scale(1.05);
 }
+
+footer {
+  background-color: #32e0c4;
+  color: #1e2022;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}

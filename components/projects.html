@@ -1,6 +1,6 @@
 <div class="pf">
     <div class="pf__header">
-        <h1>PROJECT PORTFOLIO</h1>
+        <h1 id='title__project' >PROJECT PORTFOLIO</h1>
         <hr>
     </div>
     <div id='pf__contents' >
@@ -27,37 +27,40 @@
         }
     ];
 
-    for (let i=0; i<=projectTitles.length; i++){
-        $("#pf__contents").append(
-            `<div class="pf__rows" id ="pf__rows">
-                <div class="pf__rowCard" style="margin-right: 30px;" >
-                    <img src='' alt='image' />
-                    <h2>${projectTitles[i].p1}</h2>
-                    <p>${projectOverview[i].p1}</p>
-                    <div>
-                        <button>
-                            Go to project
-                        </button>
-                        <button>
-                            View project repository
-                        </button>
+    $(document).ready(() => {
+        for (let i=0; i<=projectTitles.length; i++){
+            $("#pf__contents").append(
+                `<div class="pf__rows" id ="pf__rows">
+                    <div class="pf__rowCard" style="margin-right: 30px;" >
+                        <img src='' alt='image' />
+                        <h2>${projectTitles[i].p1}</h2>
+                        <p>${projectOverview[i].p1}</p>
+                        <div>
+                            <button>
+                                Go to project
+                            </button>
+                            <button>
+                                View project repository
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="pf__rowCard">
-                    <img src='' alt='image' />
-                    <h2>${projectTitles[i].p2}</h2>
-                    <p>${projectOverview[i].p2}</p>
-                    <div>
-                        <button>
-                            Go to project
-                        </button>
-                        <button>
-                            View project repository
-                        </button>
+                    <div class="pf__rowCard">
+                        <img src='' alt='image' />
+                        <h2>${projectTitles[i].p2}</h2>
+                        <p>${projectOverview[i].p2}</p>
+                        <div>
+                            <button>
+                                Go to project
+                            </button>
+                            <button>
+                                View project repository
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </div>`
-        );
-    };
+                </div>`
+            );
+        };
+    })
+    
     
 </script>

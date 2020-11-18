@@ -16,9 +16,9 @@
             <div class="home__header">
                 <h2>WENDELL BALAGOT</h2>
                 <ul>
-                    <li><a>Home</a></li>
-                    <li><a>Projects</a></li>
-                    <li><a>Contact</a></li>
+                    <li><a >Home</a></li>
+                    <li><a id='nav__project' >Projects</a></li>
+                    <li><a  id='nav__contact'>Contact</a></li>
                 </ul>
             </div>
             <div class="home__body">
@@ -39,7 +39,7 @@
         <div class="app__portfolio" id='app__portfolio'>
         </div>
         <!-- PROJECT DIV END -->
-        <div class="app__contact">
+        <div class="app__contact" id='title__contact'>
             <div>
                 <h1>SAY HELLO!</h1>
                 <ul>
@@ -52,10 +52,23 @@
             <img src="./assets//self.jpg" alt="image" />
         </div>
     </div>
-</body>
+</body> 
+<footer>
+    <p>2020 JOHN WENDELL BALAGOT</p>
+</footer>
 <script>
     $(document).ready(() => {
         $('#app__portfolio').load('./components/projects.html');
+    });
+    $('#nav__project').click(() => {
+        $('#title__project')[0].scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+    $('#nav__contact').click(() => {
+        $('#title__contact')[0].scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 </script>
 </html>
