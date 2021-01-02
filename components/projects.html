@@ -4,27 +4,57 @@
         <hr>
     </div>
     <div id='pf__contents' >
-        
+        <!-- Project Contents will render here -->
     </div>
 </div>
 
 <script>
 
     const projectTitles =[
-        {p1: 'IP TRACKER', p2: 'MEETME'},
-        {p1: 'DISROPE', p2: 'INSTAPOUND'}
+        {p1: 'INSTAPOUND', p2: 'DISROPE'},
+        {p1: 'COVID-19 TRACKER', p2: 'MEETME'},
+        {p1: 'SEARCHH', p2: 'IP TRACKER'}
+        
         
     ];
 
     const projectOverview = [
         {
-            p1: 'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-            p2: 'Felis donec et odio pellentesque. Pulvinar mattis nunc sed blandit libero volutpat sed. Eget egestas purus viverra accumsan in. Eu volutpat odio facilisis mauris sit. Amet consectetur adipiscing elit duis tristique sollicitudin.'
+            p1: {
+                info: 'A social media web app to share photos with friends & family.',
+                img: '../assets/instapound.png',
+                repo: 'https://github.com/iamwendellbalagot/instapound'
+            },
+            p2: {
+                info: 'A web app for instant messaging and digital distribution platform designed for creating communities.',
+                img: '../assets/disrope.png',
+                repo: 'https://github.com/iamwendellbalagot/disrope'
+            }
         },
         {
-            p1: 'Semper risus in hendrerit gravida rutrum quisque non. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Suspendisse potenti nullam ac tortor vitae purus faucibus.',
-            p2: 'Accumsan lacus vel facilisis volutpat est velit egestas dui id. Tellus molestie nunc non blandit massa enim nec. Orci porta non pulvinar neque laoreet. Mattis vulputate enim nulla aliquet. '
-        }
+            p1: {
+                info: 'This tracker provides the number of cases and deaths from novel coronavirus by country, the trend in case and death counts by country, and a global map of showing which countries have cases and deaths.',
+                img: '../assets/c19-tracker.png',
+                repo: 'https://github.com/iamwendellbalagot/covid-tracker'
+            },
+            p2: {
+                info: 'A video communication web app, share your video with teammates and friends.',
+                img: '../assets/meetme.png',
+                repo: 'https://github.com/iamwendellbalagot/MeetMe-app'
+            }
+        },
+        {
+            p1: {
+                info: 'A search engine application built with google search engine API.',
+                img: '../assets/searchh.png',
+                repo: 'https://github.com/iamwendellbalagot/searchh'
+            },
+            p2: {
+                info: 'IP Address Lookup web app to display details like location, ISP, and domain name.',
+                img: '../assets/ip-tracker.png',
+                repo: 'https://github.com/iamwendellbalagot/ip-tracker'
+            }
+        },
     ];
 
     $(document).ready(() => {
@@ -32,29 +62,23 @@
             $("#pf__contents").append(
                 `<div class="pf__rows" id ="pf__rows">
                     <div class="pf__rowCard" style="margin-right: 30px;" >
-                        <img src='' alt='image' />
+                        <img src=${projectOverview[i].p1.img} alt='image' />
                         <h2>${projectTitles[i].p1}</h2>
-                        <p>${projectOverview[i].p1}</p>
+                        <p>${projectOverview[i].p1.info}</p>
                         <div>
-                            <button>
-                                Go to project
-                            </button>
-                            <button>
+                            <a target="_blank" href=${projectOverview[i].p1.repo}>
                                 View project repository
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="pf__rowCard">
-                        <img src='' alt='image' />
+                        <img src=${projectOverview[i].p2.img} alt='image' />
                         <h2>${projectTitles[i].p2}</h2>
-                        <p>${projectOverview[i].p2}</p>
+                        <p>${projectOverview[i].p2.info}</p>
                         <div>
-                            <button>
-                                Go to project
-                            </button>
-                            <button>
+                            <a target="_blank" href=${projectOverview[i].p2.repo}>
                                 View project repository
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>`

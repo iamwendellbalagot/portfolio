@@ -22,13 +22,14 @@
                 </ul>
             </div>
             <div class="home__body">
-                <h1>WEB DEVELOPMENT</h1>
+                <h1>SOFTWARE ENGINEERING</h1>
                 <h1>PORTFOLIO</h1>
+                
                 <div class="home__bodyButtons">
-                    <button id='btn'>GitHub</button>
-                    <button>LinkedIn</button>
-                    <button style="font-size: 30px;">⬇</button>
-                    <button>Data Science</button>
+                    <button onclick="location.href='https://github.com/iamwendellbalagot'" type="button" >GitHub</button>
+                    <button onclick="location.href='https://www.linkedin.com/in/iamwendellbalagot'" >LinkedIn</button>
+                    <button id='nav__down' style="font-size: 30px;">⬇</button>
+                    <button onclick="location.href='https://www.kaggle.com/delllectron/'" >Data Science</button>
                     <button>Twitter</button>
                 </div>
             </div>
@@ -55,11 +56,16 @@
 </body> 
 <footer>
     <img src="./assets//home.svg" alt="home" id="nav__home" >
-    <p>2020 JOHN WENDELL BALAGOT</p>
+    <p>2021 JOHN WENDELL BALAGOT</p>
 </footer>
 <script>
     $(document).ready(() => {
         $('#app__portfolio').load('./components/projects.html');
+    });
+    $('#nav__down').click(() => {
+        $('#title__project')[0].scrollIntoView({
+            behavior: 'smooth'
+        });
     });
     $('#nav__project').click(() => {
         $('#title__project')[0].scrollIntoView({
