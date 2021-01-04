@@ -8,8 +8,12 @@
   align-items: center;
 }
 
+.pf__header {
+  width: 100%;
+}
+
 .pf__header > h1 {
-  margin-left: 50px;
+  /* margin-left: 50px; */
   margin-bottom: 10px;
   text-align: center;
   margin-right: 3%;
@@ -41,7 +45,9 @@
 
 .pf__rowCard > img {
   height: 400px;
-  object-fit: contain;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  object-fit: cover;
   width: 100%;
   background-color: #1e2022;
 }

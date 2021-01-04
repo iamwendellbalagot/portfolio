@@ -21,8 +21,8 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #1e2022;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .home__header {
